@@ -1,1 +1,23 @@
-
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Sanhya ❤️</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff5f8f,#ffb3c7);overflow:hidden;color:#fff}
+.c{display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px}
+.card{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);padding:28px;border-radius:20px;max-width:700px}
+h1{font-size:2.2rem}.btn{padding:14px 28px;border:none;border-radius:999px;background:#fff;color:#e91e63;font-weight:bold;cursor:pointer}
+#final{display:none}
+.heart{position:fixed;bottom:-20px;animation:f 8s linear infinite}
+@keyframes f{to{transform:translateY(-120vh);opacity:0}}
+</style></head><body><div class="c"><div class="card">
+<div id="main"><h1>💖 Hey Sanhya 💖</h1><p>Babyyy I love uhh 😘💗<br><br>
+Jab se tum meri life mein aayi ho, meri duniya aur bhi khoobsurat ho gayi hai.<br><br>
+Tum meri smile, meri peace aur meri favourite person ho. Main hamesha tumhara saath dunga. ❤️<br><br>
+I don't just love you... I choose you, every single day. 🌹</p>
+<button class="btn" onclick="go()">Click Here ❤️</button></div>
+<div id="final"><h1>💍 Will You Stay With Me Forever?</h1><h2>Love You Forever, Sanhya ❤️</h2><p>Forever Yours,<br><b>Shivansh</b></p></div>
+</div></div>
+<script>
+function go(){main.style.display='none';final.style.display='block';confetti()}
+for(let i=0;i<40;i++){let d=document.createElement('div');d.className='heart';d.innerHTML='❤';d.style.left=Math.random()*100+'vw';d.style.fontSize=(12+Math.random()*24)+'px';d.style.animationDuration=(4+Math.random()*5)+'s';document.body.appendChild(d);}
+function confetti(){for(let i=0;i<80;i++){let s=document.createElement('span');s.textContent='💖';s.style.position='fixed';s.style.left=Math.random()*100+'vw';s.style.top='-20px';s.style.fontSize='20px';s.style.transition='4s linear';document.body.appendChild(s);setTimeout(()=>{s.style.top='100vh';},10);}}
+</script></body></html>
