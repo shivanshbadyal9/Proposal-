@@ -3,52 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Love ❤️</title>
+<title>Happy Girlfriend Day ❤️</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#050505,#170010,#300020);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:25px;
+}
+
+h1{
+font-size:55px;
+font-family:'Great Vibes',cursive;
+color:#ff4d88;
+text-shadow:0 0 20px #ff4d88;
+}
+
+h2{
+margin-top:15px;
+font-size:26px;
+}
+
+button{
+margin-top:40px;
+padding:16px 45px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff2d75;
+color:white;
+transition:.4s;
+box-shadow:0 0 25px #ff2d75;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+#message{
+display:none;
+padding:40px 20px;
+max-width:850px;
+margin:auto;
+animation:fade 2s;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+padding:35px;
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,80,150,.4);
+}
+
+.card h3{
+font-size:45px;
+font-family:'Great Vibes',cursive;
+color:#ff6fa8;
+margin-bottom:25px;
+}
+
+.card p{
+font-size:20px;
+line-height:1.9;
+}
+
+.footer{
+margin-top:40px;
+font-size:26px;
+color:#ff80b3;
+font-weight:bold;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+color:#ff3b7d;
+font-size:20px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-20px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+</style>
 </head>
 
 <body>
 
-<div class="hearts"></div>
+<div class="hero">
+<h1>Happy Girlfriend Day ❤️</h1>
 
-<div class="container">
+<h2>Dear Sanhya 💖</h2>
+
+<button onclick="showLove()">
+Open My Heart ❤️
+</button>
+</div>
+
+<div id="message">
 
 <div class="card">
 
-<h1>💖 Hey Sanhya 💖</h1>
+<h3>To My Beautiful Girlfriend ❤️</h3>
 
-<h2>Babyyy I Love Uhh 😘💗</h2>
+<p>
+Happy Girlfriend Day, My Love! ❤️
+<br><br>
 
-<p id="typing"></p>
+Today is just another reminder of how lucky I am to have someone as kind, caring, and beautiful as you in my life.
 
-<button id="openBtn">
-💌 Open My Heart
-</button>
+You make my days brighter, my heart happier, and my world more meaningful.
+
+<br><br>
+
+Thank you for your love and for always being there for me.
+
+On this Girlfriend Day, I just want you to know that you are my happiness, my peace, my biggest blessing, and my favorite person.
+
+<br><br>
+
+I love you today, tomorrow, and always. ❤️
+
+<br><br>
+
+Forever Yours,
+
+<br>
+
+❤️ Shivansh ❤️
+
+</p>
+
+<div class="footer">
+
+No matter where life takes us,
+
+my heart will always choose you. ❤️
 
 </div>
 
 </div>
 
-<div id="proposal">
-
-<h1>🌹 Will You Stay With Me Forever? 🌹</h1>
-
-<img src="assets/cat.gif" width="220">
-
-<h2>❤️ Forever Yours ❤️</h2>
-
-<h3>Shivansh</h3>
-
-<button id="yesBtn">
-YES FOREVER 💍
-</button>
-
 </div>
 
-<script src="script.js"></script>
+<audio id="music" loop>
+<source src="osanam.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function showLove(){
+
+document.querySelector(".hero").style.display="none";
+
+document.getElementById("message").style.display="block";
+
+document.getElementById("music").play();
+
+}
+
+function hearts(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(hearts,200);
+
+</script>
 
 </body>
 </html>
-<img src="GIF_LINK_YAHAN" width="220">
