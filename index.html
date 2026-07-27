@@ -14,12 +14,31 @@
 </head>
 
 <body>
+  <div id="lockScreen">
+  <div class="lock-box">
+    <img src="assets/teddy.png" alt="Teddy" class="teddy">
+
+    <h1>🧸 Welcome My Princess 💖</h1>
+    <p>Enter the Secret Password to Unlock My Heart ❤️</p>
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Enter Password">
+
+    <button onclick="checkPassword()">
+      Unlock ❤️
+    </button>
+
+    <p id="errorMsg"></p>
+  </div>
+  </div>
 
 <audio id="bgMusic" loop>
   <source src="assets/IshqSufiyana.mp3" type="audio/mpeg">
 </audio>
 
-<div id="intro">
+<div id="intro" style="display:none;">
 
 <h1>Happy Girlfriend Day ❤️</h1>
 
