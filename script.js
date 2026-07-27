@@ -1,6 +1,4 @@
-const message = `To My Beautiful Girlfriend ❤️
-
-Happy Girlfriend Day, My Love!
+const message = `Happy Girlfriend Day, My Love!
 
 Today is just another reminder of how lucky I am to have someone as kind, caring, and beautiful as you in my life.
 
@@ -22,10 +20,6 @@ function startLove() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("main").style.display = "block";
 }
-
-    const music = document.getElementById("bgMusic");
-music.play().catch(() => {});
-
     typeWriter();
     updateTimer();
 
