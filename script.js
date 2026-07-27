@@ -17,10 +17,11 @@ Forever Yours,
 ❤️ Shivansh ❤️`;
 
 let i = 0;
-
 function startLove() {
+    document.getElementById("bgMusic").play();
     document.getElementById("intro").style.display = "none";
     document.getElementById("main").style.display = "block";
+}
 
     const music = document.getElementById("bgMusic");
 music.play().catch(() => {});
