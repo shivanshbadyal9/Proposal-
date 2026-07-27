@@ -1,23 +1,68 @@
-const text =
-"Jab se tum meri life me aayi ho, meri duniya aur bhi khoobsurat ho gayi hai. ❤️\n\nBabyyy I Love Uhh 😘💗\n\nTum meri smile ho, meri happiness ho aur meri favourite person ho. 🌹";
+const message = `To My Beautiful Girlfriend ❤️
+
+Happy Girlfriend Day, My Love!
+
+Today is just another reminder of how lucky I am to have someone as kind, caring, and beautiful as you in my life.
+
+You make my days brighter, my heart happier, and my world more meaningful.
+
+Thank you for your love and for always being there for me.
+
+On this Girlfriend Day, I just want you to know that you are my happiness, my peace, my biggest blessing, and my favorite person.
+
+I love you today, tomorrow, and always.
+
+Forever Yours,
+
+❤️ Shivansh ❤️`;
 
 let i = 0;
 
-function typeWriter() {
-  if (i < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 45);
-  }
+function startLove() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("main").style.display = "block";
+
+    const music = document.getElementById("music");
+    music.play().catch(() => {});
+
+    typeWriter();
+    updateTimer();
+
+    setInterval(createHeart, 300);
 }
 
-window.onload = typeWriter;
+function typeWriter() {
+    if (i < message.length) {
+        document.getElementById("typing").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeWriter, 35);
+    }
+}
 
-document.getElementById("openBtn").onclick = function () {
-  document.querySelector(".container").style.display = "none";
-  document.getElementById("proposal").style.display = "block";
-};
+function updateTimer() {
+    const startDate = new Date("2026-04-17T00:00:00");
 
-document.getElementById("yesBtn").onclick = function () {
-  alert("💖 Yaaay!! ❤️\nForever Yours,\nShivansh 💍");
-};
+    setInterval(() => {
+        const now = new Date();
+        const diff = now - startDate;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+        document.getElementById("loveTimer").innerHTML =
+            `${days} Days ${hours} Hours ${minutes} Minutes ❤️`;
+    }, 1000);
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🌹";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (18 + Math.random() * 18) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
