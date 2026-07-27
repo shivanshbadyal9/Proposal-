@@ -66,3 +66,11 @@ function createHeart() {
     document.body.appendChild(heart);
 
     setTimeout(() => {
+    heart.remove();
+}, 6000);
+}
+
+function showEnding() {
+    document.getElementById("main").style.display = "none";
+    document.getElementById("ending").style.display = "flex";
+}
