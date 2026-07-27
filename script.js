@@ -22,7 +22,7 @@ function startLove() {
     document.getElementById("intro").style.display = "none";
     document.getElementById("main").style.display = "block";
 
-    const music = document.getElementById("music");
+    const music = document.getElementById("bgMusic");
     music.play().catch(() => {});
 
     typeWriter();
