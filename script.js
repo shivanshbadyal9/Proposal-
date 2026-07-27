@@ -38,7 +38,22 @@ function typeWriter() {
         setTimeout(typeWriter, 35);
     }
 }
+function checkPassword(){
 
+    const pass=document.getElementById("password").value;
+
+    if(pass==="2008"){
+
+        document.getElementById("lockScreen").style.display="none";
+        document.getElementById("intro").style.display="flex";
+
+    }else{
+
+        document.getElementById("errorMsg").innerHTML="❌ Wrong Password 😢";
+
+    }
+
+}
 
 function updateTimer() {
 
