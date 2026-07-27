@@ -177,3 +177,24 @@ opacity:0;
     display:block;
     width:100%;
 }
+.teddy{
+    width:100px;
+    height:auto;
+    display:block;
+    margin:0 auto 15px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+#errorMsg{
+    color:red;
+    margin-top:10px;
+}
